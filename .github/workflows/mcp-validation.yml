@@ -1,0 +1,25 @@
+name: Angular MCP validation
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate-mcp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate Angular MCP CLI
+        run: npx -y @angular/cli mcp --experimental-tool modernize --read-only --help
+        # This step validates the MCP command is available and accepts the configured flags

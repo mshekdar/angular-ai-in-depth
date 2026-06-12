@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "mcp:start": "npx @angular/cli mcp --experimental-tool modernize --read-only"
   },
   "prettier": {
     "printWidth": 100,

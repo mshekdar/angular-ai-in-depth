@@ -259,3 +259,22 @@ These courses are archived and replaced with newer versions, but are still acces
 
 <img src="https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png" width="400" alt="The Complete Typescript Course">
 
+
+---
+
+MCP server (Angular CLI)
+
+This repository includes an MCP server configuration to help AI assistants generate Angular v22-compatible code.
+
+Start locally from the repository root:
+
+- npm run mcp:start
+
+Or run directly:
+
+- npx @angular/cli mcp --experimental-tool modernize --read-only
+
+Config file: .mcp/angular-cli.json
+
+This command runs the Angular CLI MCP tool in read-only mode and enables the `modernize` experimental tool. Use `--help` to validate the installation: `npx @angular/cli mcp --help`.
+

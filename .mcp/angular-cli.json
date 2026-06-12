@@ -1,0 +1,16 @@
+{
+  "angular-cli": {
+    "description": "Angular CLI MCP server that provides Angular docs and version-aware guidance to AI assistants.",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@angular/cli",
+      "mcp",
+      "--experimental-tool",
+      "modernize",
+      "--read-only"
+    ],
+    "workDir": "./",
+    "notes": "Run from repository root. This starts the Angular MCP server which helps AI assistants generate Angular v22-compatible code. To disable experimental flags remove '--experimental-tool','modernize'."
+  }
+}
