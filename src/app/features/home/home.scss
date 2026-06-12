@@ -1,0 +1,28 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+
+  &.sidebar-collapsed .main-content {
+    margin-left: 70px;
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  transition: margin-left var(--transition-base);
+
+  @media (max-width: 768px) {
+    margin-left: 70px;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+  }
+}

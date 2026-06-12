@@ -1,0 +1,58 @@
+<div class="conversation-thread">
+  <div class="messages-container">
+    <div *ngFor="let message of conversation()?.messages" 
+         [class.user-message]="message.sender === 'user'"
+         [class.ai-message]="message.sender === 'ai'"
+         class="message-wrapper">
+      <div class="message-content">
+        <div class="message-bubble">
+          <p class="message-text">{{ message.content }}</p>
+          <span class="message-time">{{ formatTime(message.timestamp) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="thinking-section">
+    <div class="spinner"></div>
+    <p class="thinking-text">It can take up to 20 seconds to get a reply.</p>
+    <p class="thinking-timer">10 seconds ...</p>
+  </div>
+
+  <div class="input-section">
+    <div class="input-wrapper">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+      <input
+        type="text"
+        placeholder="Send a message"
+        class="chat-input"
+      />
+      <button class="send-btn" title="Send message">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M16 8l-6 6-6-6h12z" />
+          <path d="M16 18c0 0 0-12 0-12l-8 0c0 0 0 12 0 12h8z" transform="translate(0 -2) rotate(45 8 12)" />
+          <path d="M12 4l0 16" />
+          <path d="M6 10l6-6 6 6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    ⚠️ Give our AI as much context as possible, to get the best results. If an error occurs, please try again after a few seconds.
+  </p>
+</div>

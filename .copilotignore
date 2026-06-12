@@ -1,0 +1,43 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+private/
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+*.tgz
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+.vs/
+
+# Git and version control
+.git/
+.gitignore
+
+# Testing and coverage
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Package manager lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+
+prompts/

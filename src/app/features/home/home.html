@@ -1,0 +1,10 @@
+<div [class.sidebar-collapsed]="!sidebarExpanded()" class="home-container">
+  <app-sidebar (sidebarToggle)="toggleSidebar()" [expanded]="sidebarExpanded()" />
+  <main class="main-content">
+    <app-initial-state *ngIf="!currentConversation()" />
+    <app-conversation-thread
+      *ngIf="currentConversation()"
+      [conversation]="currentConversation()"
+    />
+  </main>
+</div>
