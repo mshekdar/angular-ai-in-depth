@@ -76,6 +76,13 @@
   gap: var(--spacing-sm);
 }
 
+.message-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
 .message-text {
   margin: 0;
   font-size: var(--text-base);
@@ -87,6 +94,35 @@
 .message-time {
   font-size: var(--text-xs);
   color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+
+  &:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .thinking-section {
@@ -147,7 +183,7 @@
   }
 
   svg:first-child {
-    color: var(--text-muted);
+    color: white;
     flex-shrink: 0;
   }
 }
@@ -174,7 +210,7 @@
   background-color: var(--primary-color);
   border: none;
   border-radius: var(--border-radius-full);
-  color: var(--text-primary);
+  color: white;
   cursor: pointer;
   transition: all var(--transition-fast);
   flex-shrink: 0;
